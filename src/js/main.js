@@ -1,5 +1,21 @@
 import { postFilme} from "./filmes.js"
 
+async function preencherContainer() {
+
+    const container = document.getElementById('cards-filme')
+    const filmes = await getFilmes()
+
+    filmes.forEach(filme => {
+        const card = criarCard(filme)
+        container.appendChild(card)
+    });
+
+}
+
+preencherContainer()
+
+
+
 const btnAddFilme = document.getElementById('criar')
 
 async function adicionarFilme(){
@@ -26,6 +42,14 @@ async function adicionarFilme(){
         console.log(error)
     }
 
+    if (adicionarFilme) {
+        alert("Filme cadastrado com sucesso!!!")
+    }else{
+        alert("Algo deu errado")
+    }
+    
+
 }
 
 btnAddFilme.addEventListener('click', adicionarFilme)
+
