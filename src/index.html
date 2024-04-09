@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/main.js" type="module" defer></script>
     <link rel="stylesheet" href="./output.css">
-    <link rel="icon" class="icon" href="../img/logo-coyote.png">
+    <link rel="icon" class="icon" href="./img/logo-coyote.png">
     <title>Cadastre um novo filme</title>
 </head>
-<body class="bg-gradient-to-b from-vermelho-fundo  to-gradiente h-screen">
+<body class="bg-gradient-to-b from-vermelho-fundo  to-gradiente h-screen w-screen">
 <header class="h-[10vh] flex">
     <img class="h-[10vh]" src="./img/logo.png" alt="">
 
@@ -16,30 +16,41 @@
     <h1>CADASTRE UM NOVO FILME</h1>
 </header>
     
-<main class=" h-[90vh] flex justify-center items-center ">
-    <div class="pr-20 items-stretch">
-        <h2>Título</h2>
-        <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="nome">
-        <h2>Sinopse</h2>
-        <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="sinopse">
-        <h2>Duração</h2>
-        <input type="text" class="bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw] " autocomplete="off" id="duracao">
-        <h2>Data de lançamento</h2>
-        <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="data_lancamento">
-    </div>
-    <div class=" flex flex-col">
-        <h2>Data de relançamento</h2>
-        <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="data_relancamento">
-        <h2>Foto da capa</h2>
-        <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="foto_capa">
-        <h2>Valor unitário</h2>
-        <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" autocomplete="off" id="valor_unitario">
-    
-        <button class="border-2 border-input-add rounded-md h-[6vh]  w-[30vw]" id="criar">criar</button>
+<main class=" h-[90vh] flex justify-center items-center flex-col w-full">
+    <div class="flex">
+        <div class=" flex flex-col pr-20  text-white  h-[40vh] justify-between">
+            <h2>Título</h2>
+            <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="nome">
+            <h2>Sinopse</h2>
+            <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="sinopse">
+            <h2>Duração</h2>
+            <input type="time" class="bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw] " autocomplete="off" id="duracao">
+            <h2>Data de lançamento</h2>
+            <input type="date" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="data_lancamento">
+        </div>
+        <div class=" flex flex-col  text-white h-[40vh] justify-between">
+            <h2>Data de relançamento</h2>
+            <input type="date" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="data_relancamento">
+            <h2>Foto da capa</h2>
+            <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]" id="foto_capa">
+            <h2>Valor unitário</h2>
+            <input type="text" class=" bg-transparent border-2 border-input-add rounded-md h-[6vh] w-[30vw]  " autocomplete="off" id="valor_unitario">
+            <br>
+            <button class="border-2 border-input-add rounded-md h-[6vh]  w-[30vw] " id="criar">criar</button>
+        </div>
     </div>
   
+    <div class="flex w-[90vw] h-[20vh] justify-end items-end">
+        <div class="">
+            <a class="flex items-center " href="./cadastrados.html">
+                <img class="h-[6vh]" src="./img/coiote.png" alt="">
+                <h3 class="text-white">Filmes cadastrados</h3>
+            </a>
+        </div>      
+    </div>
+ 
+    
 </main>
-
 
 </body>
 </html>
