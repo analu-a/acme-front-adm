@@ -23,35 +23,26 @@ async function adicionarFilme(){
         novoFilme.foto_capa = foto_capa
         novoFilme.valor_unitario = valor_unitario
         console.log(novoFilme)
-        await postFilme(novoFilme)
+        let filmeNovo = await postFilme(novoFilme)
+        if (filmeNovo) {
+            alert("Filme cadastrado com sucesso!!!")
+        }else{
+            alert("Algo deu errado")
+        }
     } catch (error) {
         console.log(error)
     }
 
-    if (adicionarFilme) {
-        alert("Filme cadastrado com sucesso!!!")
-    }else{
-        alert("Algo deu errado")
-    }
     
 
 }
 
-// async function preencherContainer() {
-
-//     const container = document.getElementById('cards-filme')
-//     const filmes = await getFilmes()
-
-//     filmes.forEach(filme => {
-//         const card = criarCard(filme)
-//         container.appendChild(card)
-//     });
-
-// }
-
-// preencherContainer()
-
-
 
 btnAddFilme.addEventListener('click', adicionarFilme)
+
+
+
+
+
+
 
