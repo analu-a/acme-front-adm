@@ -27,3 +27,16 @@ export async function postGenero(novoGenero){
 
     return response.ok
 }
+
+export async function postAtor(novoAtor){
+    const url = 'http:localhost:8080/v2/FilmesACME/ator'
+    const options = {
+        method: 'POST',
+        headers:{
+            'content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoAtor)
+    }
+    const response = await fetch(url, options)
+    return response.ok
+}
