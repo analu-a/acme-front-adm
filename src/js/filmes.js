@@ -40,3 +40,16 @@ export async function postAtor(novoAtor){
     const response = await fetch(url, options)
     return response.ok
 }
+
+export async function postDiretor(novoDiretor){
+    const url = 'http:localhost:8080/v2/FilmesACME/diretor'
+    const options = {
+        method: 'POST',
+        headers:{
+            'content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoDiretor)
+    }
+    const response = await fetch(url, options)
+    return response.ok
+}

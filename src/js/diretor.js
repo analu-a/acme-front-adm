@@ -1,4 +1,4 @@
-import {postAtor} from "./filmes.js"
+import {postDiretor} from "./filmes.js"
 
 const btnAddDiretor = document.getElementById('cadastrar')
 
@@ -34,7 +34,7 @@ async function adicionarDiretor(){
 }
 
 
-btnAddAtor.addEventListener('click', adicionarDiretor)
+btnAddDiretor.addEventListener('click', adicionarDiretor)
 
 async function getDiretores (){
     const url = 'http://localhost:8080/v2/FilmesACME/diretores'
