@@ -1,7 +1,6 @@
 import {postGenero} from "./filmes.js"
 
 
-
 const btnAddGenero = document.getElementById('generos')
 
 async function adicionarGenero(){
