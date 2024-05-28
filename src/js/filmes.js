@@ -28,6 +28,7 @@ export async function postGenero(novoGenero){
     return response.ok
 }
 
+<<<<<<< HEAD
 export async function getFilme (id){
         const url = `http://localhost:8080/v2/FilmesACME/filme/${id}`
         const response = await fetch(url)
@@ -75,5 +76,30 @@ export async function putFilme(filme,id) {
     const response=await fetch(url,options)
     console.log(response);
     console.log(response.ok);
+=======
+export async function postAtor(novoAtor){
+    const url = 'http:localhost:8080/v2/FilmesACME/ator'
+    const options = {
+        method: 'POST',
+        headers:{
+            'content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoAtor)
+    }
+    const response = await fetch(url, options)
+    return response.ok
+}
+
+export async function postDiretor(novoDiretor){
+    const url = 'http:localhost:8080/v2/FilmesACME/diretor'
+    const options = {
+        method: 'POST',
+        headers:{
+            'content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoDiretor)
+    }
+    const response = await fetch(url, options)
+>>>>>>> a215d651ba5143722845746ddf076fcd17313790
     return response.ok
 }

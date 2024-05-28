@@ -654,6 +654,14 @@ video {
   width: 100vw;
 }
 
+.w-\[100vw\] {
+  width: 100vw;
+}
+
+.w-\[80vw\] {
+  width: 80vw;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -725,6 +733,11 @@ video {
 
 .pr-20 {
   padding-right: 5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-white {
